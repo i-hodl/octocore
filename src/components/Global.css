@@ -1,0 +1,34 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Dark background, essential for cyberpunk themes */
+    color: #c0c0c0; /* Soft light text color */
+    font-family: 'Orbitron', sans-serif; /* Futuristic font for cyberpunk feel */
+  }
+  
+  a {
+    color: #39ff14;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #ffffff;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Center the cards horizontally */
+    align-items: stretch; /* Align the cards heights */
+  }
+  
+  .flipcard {
+    flex: 0 1 300px; /* Flex-basis of 300px with an ability to grow and shrink */
+    display: flex;
+    flex-direction: column; /* Stack the children (front/back) vertically */
+    margin-bottom: 20px; /* Provide some spacing between the rows */
+  }
+  
+  /* Add other necessary styles */
+  

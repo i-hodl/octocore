@@ -1,0 +1,31 @@
+{
+    "name": "iH0DL Logo",
+    "created_by": "iH0DL",
+    "external_url": "https://octocore.eth.limo",
+    "description": "The iconic Octopus",
+    "attributes": [
+        {
+            "trait_type": "Artist",
+            "value": "iH0DL"
+        },
+        {
+            "trait_type": "Editions",
+            "display_type": "number",
+            "value": "1",
+            "max_value": "1"
+        },
+        {
+            "trait_type": "Media",
+            "value": "4000 x 4000 png"
+        },
+        {
+            "trait_type": "#",
+            "value": "TRASHART"
+        }
+    ],
+    "image": "https://octocore.eth.limo/images/25.png",
+    "image_url": "https://octocore.eth.limo/images/25.png",
+    "thumbnail": "https://octocore.eth.limo/",
+    "absolute": "25.png",
+    "token_id": "25"
+}

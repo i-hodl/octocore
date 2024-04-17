@@ -1,0 +1,38 @@
+{
+    "name": "You Can't Unplug",
+    "created_by": "iH0DL",
+    "external_url": "https://octocore.eth.limo",
+    "description": "Even if you wanted to.",
+    "attributes": [
+        {
+            "trait_type": "Artist",
+            "value": "iH0DL"
+        },
+        {
+            "trait_type": "Media",
+            "value": "4000\u200a\u00d7\u200a6000 PNG"
+        },
+        {
+            "trait_type": "Color Profile",
+            "value": "sRGB IEC61966-2.1"
+        },
+        {
+            "display_type": "number",
+            "trait_type": "Supply",
+            "value": "1",
+            "max_value": "1"
+        }
+    ],
+    "image_details": {
+        "bytes": 4374986,
+        "format": "PNG",
+        "sha256": "f41cb858a6f193abf0b17cc64aa02b25a4a7da7421f4df5fb80b5a7ed28b1758",
+        "width": 4000,
+        "height": 6000
+    },
+    "image": "https://octocore.eth.limo/images/29.webp",
+    "image_url": "https://octocore.eth.limo/images/29.webp",
+    "thumbnail": "https://octocore.eth.limo/",
+    "absolute": "./images/29.webp",
+    "token_id": "29"
+}
