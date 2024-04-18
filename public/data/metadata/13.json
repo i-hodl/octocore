@@ -28,6 +28,6 @@
     "image_url": "https://octocore.eth.limo/images/13.png",
     "animation": "https://octocore.eth.limo/images/13.png",
     "thumbnail": "https://octocore.eth.limo/",
-    "absolute": "12.png",
-    "token_id": "13"
+    "token_id": "13",
+    "core": "/data/images/13.png"
 }

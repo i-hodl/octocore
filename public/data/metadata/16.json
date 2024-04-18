@@ -48,6 +48,6 @@
     "image_url": "https://octocore.eth.limo/images/16.webp",
     "animation": "https://octocore.eth.limo/images/16.webp",
     "thumbnail": "https://octocore.eth.limo/",
-    "absolute": "16.webp",
-    "token_id": "16"
+    "token_id": "16",
+    "core": "/data/images/16.webp"
 }

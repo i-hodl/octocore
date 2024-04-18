@@ -30,6 +30,6 @@
     "image": "https://octocore.eth.limo/images/9.jpeg",
     "image_url": "https://octocore.eth.limo/images/9.jpeg",
     "thumbnail": "https://octocore.eth.limo/",
-    "absolute": "9.jpeg",
-    "token_id": "9"
+    "token_id": "9",
+    "core": "/data/images/9.jpeg"
 }

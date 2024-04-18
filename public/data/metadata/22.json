@@ -30,6 +30,6 @@
     "image": "https://octocore.eth.limo/images/22.webp",
     "image_url": "https://octocore.eth.limo/images/22.webp",
     "thumbnail": "https://octocore.eth.limo/",
-    "absolute": "22.webp",
-    "token_id": "22"
+    "token_id": "22",
+    "core": "/data/images/22.webp"
 }

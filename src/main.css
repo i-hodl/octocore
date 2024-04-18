@@ -1,0 +1,71 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.flipcard {
+  perspective: 1000px;
+  margin: 10px;
+  overflow: hidden; /* Ensures nothing spills outside the card */
+}
+
+.flipcard-inner {
+  position: relative;
+  width: 100%; /* Width will automatically adjust to the image */
+  height: auto; /* Height will automatically adjust to the image */
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.flipcard:hover .flipcard-inner {
+  transform: rotateY(180deg);
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%; /* Match width to parent */
+  height: 100%; /* Match height to parent */
+  backface-visibility: hidden; /* Ensures the back face is hidden when flipped */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.front {
+  background-color: #bbb;
+  color: black;
+}
+
+.back {
+  background-color: #eee;
+  color: black;
+  transform: rotateY(180deg);
+}
+
+.front img, .back img {
+  max-width: 100%; /* Ensures image does not exceed the card's width */
+  max-height: 100%; /* Ensures image does not exceed the card's height */
+  width: auto; /* Maintain original aspect ratio */
+  height: auto; /* Maintain original aspect ratio */
+}
+
+button {
+  margin-top: 20px;
+}
+
+.nft-title {
+  font-size: 2em;
+  color: #fff;
+  text-align: center;
+  margin: 20px 0;
+}

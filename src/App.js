@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import FlipCard from './components/FlipCard';
 import SingleNFTView from './components/SingleNFTView';
-import './components/Global.css'; // Ensure this path is correct
+import './main.css'; // Ensure this path is correct
 
 function App() {
   return (

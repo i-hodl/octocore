@@ -31,6 +31,6 @@
     "image_url": "https://octocore.eth.limo/images/7.gif",
     "animation": "https://octocore.eth.limo/images/7.gif",
     "thumbnail": "https://octocore.eth.limo/",
-    "absolute": "7.gif",
-    "token_id": "7"
+    "token_id": "7",
+    "core": "/data/images/7.gif"
 }

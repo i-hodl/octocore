@@ -37,6 +37,6 @@
     "image_url": "https://octocore.eth.limo/images/4.webp",
     "animation": "https://octocore.eth.limo/images/4.webp",
     "thumbnail": "https://octocore.eth.limo/",
-    "absolute": "4.webp",
-    "token_id": "4"
+    "token_id": "4",
+    "core": "/data/images/4.webp"
 }

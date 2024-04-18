@@ -4,11 +4,24 @@ import { useParams } from 'react-router-dom';
 const SingleNFTView = () => {
   const { tokenId } = useParams();
   const [nft, setNft] = useState(null);
-
-  // Hardcoded contract address
-  const CONTRACT_ADDRESS = "0xc276ce57ecdb87d6123b4d968f329ebbd2b0b13c";
+  const [contractAddress, setContractAddress] = useState('');
 
   useEffect(() => {
+    // Fetch the contract address
+    const fetchContractAddress = async () => {
+      try {
+        const response = await fetch('/data/contract.json');
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        setContractAddress(data.address);
+      } catch (error) {
+        console.error('Error fetching contract address:', error);
+      }
+    };
+
+    // Fetch the NFT data
     const fetchNFTData = async () => {
       try {
         const response = await fetch(`/data/metadata/${tokenId}.json`);
@@ -22,22 +35,22 @@ const SingleNFTView = () => {
       }
     };
 
+    fetchContractAddress();
     fetchNFTData();
   }, [tokenId]);
 
-  if (!nft) return <div>Loading...</div>;
+  if (!nft || !contractAddress) return <div>Loading...</div>;
 
-  // Generate links with the hardcoded contract address and tokenId from the NFT metadata
-  const foundationLink = `https://foundation.app/mint/eth/${CONTRACT_ADDRESS}/${tokenId}`;
-  const raribleLink = `https://rarible.com/token/${CONTRACT_ADDRESS}:${tokenId}`;
-  const manifoldLink = `https://gallery.manifold.xyz/${CONTRACT_ADDRESS}/${tokenId}`;
+  const foundationLink = `https://foundation.app/mint/eth/${contractAddress}/${tokenId}`;
+  const raribleLink = `https://rarible.com/token/${contractAddress}:${tokenId}`;
+  const manifoldLink = `https://gallery.manifold.xyz/${contractAddress}/${tokenId}`;
 
   return (
     <div className="nft-display">
-      <h1 className="nft-title">{nft.title}</h1> {/* Make sure this is properly styled */}
       <img src={nft.image} alt={nft.title} />
+      <h1>{nft.title}</h1>
       <p>{nft.description}</p>
-      <div className="market-links">
+      <div>
         <a href={foundationLink}>Foundation</a>
         <a href={raribleLink}>Rarible</a>
         <a href={manifoldLink}>Manifold</a>
@@ -52,8 +65,6 @@ const SingleNFTView = () => {
       </div>
     </div>
   );
-  
-  
 };
 
 export default SingleNFTView;

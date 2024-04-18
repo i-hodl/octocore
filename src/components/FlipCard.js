@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import './FlipCard.css'; // Ensure this path is correct
 
 function FlipCard() {
   const [nfts, setNfts] = useState([]);
@@ -14,6 +13,7 @@ function FlipCard() {
             throw new Error(`HTTP error! status: ${response.status}`);
           }
           const data = await response.json();
+          data.imageLoaded = false; // Flag to check if image has loaded
           loadedNFTs.push(data);
         } catch (error) {
           console.error(`Error fetching metadata for NFT #${i}:`, error);
@@ -25,18 +25,24 @@ function FlipCard() {
     loadNFTs();
   }, []);
 
+  const handleImageLoad = (nft) => {
+    nft.imageLoaded = true;
+    setNfts([...nfts]); // Trigger re-render by updating state
+  };
+
   return (
     <div className="container">
       {nfts.map((nft, index) => (
         <div key={index} className="flipcard">
           <div className="flipcard-inner">
             <div className="front">
-              <img src={nft.image} alt={nft.title} />
+              {/* Ensure image loads before setting dimensions */}
+              <img src={nft.image} alt={nft.title} onLoad={() => handleImageLoad(nft)} style={{ width: '100%', height: 'auto' }} />
             </div>
             <div className="back">
               {nft.attributes.map((attr, attrIndex) => (
                 <div key={attrIndex}>
-                  <img src={`/traits/${attr.trait_type}.webp`} title={`${attr.trait_type}: ${attr.value}`} alt={attr.trait_type} />
+                  <p>{`${attr.trait_type}: ${attr.value}`}</p>
                 </div>
               ))}
               <button onClick={() => window.location.href = `/nft/${nft.token_id}`}>View NFT</button>

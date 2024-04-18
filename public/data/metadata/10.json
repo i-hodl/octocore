@@ -3,7 +3,6 @@
     "external_url": "https://octocore.eth.limo",
     "description": "I see it in my dreams.The 'Lost Partition' trait embodies a pivotal shift in the artwork's digital essence. It represents a moment where the original data became fragmented, creating a gateway to a new form of artistic expression. This trait is a testament to the unpredictable nature of digital memory \u2013 where lost segments lead to unexpected beauty and complexity. Each 'Lost Partition' piece marks a journey from known to unknown, a metamorphosis that celebrates the serendipity of digital evolution. The 'Partitioned' trait marks a significant moment in the OctoCore Collection \u2013 the date when an artwork underwent its digital transformation. 'Partitioned' signifies the division of the old and the emergence of the new, encapsulating a moment of creative rebirth and evolution.",
     "image": "https://octocore.eth.limo/images/10.gif",
-    "absolute": "10.gif",
     "image_url": "https://octocore.eth.limo/images/10.gif",
     "animation": "https://octocore.eth.limo/images/10.gif",
     "thumbnail": "https://octocore.eth.limo/",
@@ -34,5 +33,6 @@
             "value": "14 August 2024"
         }
     ],
-    "token_id": "10"
+    "token_id": "10",
+    "core": "/data/images/10.gif"
 }
